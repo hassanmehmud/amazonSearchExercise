@@ -48,12 +48,13 @@ public class amazonSearch {
      * using assertion
      */
     static void retrieveData(ChromeDriver driver) {
-        WebElement we = new WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Related searches']")));
+        WebElement we = new WebDriverWait(driver, 25).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Related searches']"))); //necessary to make elements visible
         List<WebElement> resultsList = driver.findElements(By.xpath(".//span[@class='a-size-medium a-color-base a-text-normal']"));
         int size = resultsList.size();
         System.out.println("Size of list = " + size);
-        resultsList.get(1).click();
+        resultsList.get(1).click(); //select second item, starting index from 0,1....
         String title = driver.findElement(By.id("productTitle")).getText();
+        System.out.println("Second product is selected ");
         System.out.println(title);
         try {
             Assert.assertTrue(title.contains("Nikon D3X"));

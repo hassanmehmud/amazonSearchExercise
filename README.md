@@ -7,3 +7,5 @@
  * 3 - Sort price by high to low
  * 4 - Select Second product to view details
  * 5 - Assert if the product title contains "Nikon D3X"
+
+The scripts has been developed using intellij environment.

@@ -53,8 +53,8 @@ public class amazonSearch {
         int size = resultsList.size();
         System.out.println("Size of list = " + size);
         resultsList.get(1).click(); //select second item, starting index from 0,1....
-        String title = driver.findElement(By.id("productTitle")).getText();
         System.out.println("Second product is selected ");
+        String title = driver.findElement(By.id("productTitle")).getText();
         System.out.println(title);
         try {
             Assert.assertTrue(title.contains("Nikon D3X"));

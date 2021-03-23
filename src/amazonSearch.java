@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit ;
 public class amazonSearch {
 @Test
     /*
-     * This is the setup function which configure and initiates chromedriver
+     * This is the setup function which configures and initiates chromedriver
      */
     static void setUp() {
         System.setProperty("webdriver.chrome.driver", "utilities/chromedriver.exe"); //Set chromedriver path
